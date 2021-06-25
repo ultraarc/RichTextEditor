@@ -6,6 +6,7 @@
       v-model="editorData"
       :config="editorConfig"
     ></ckeditor>
+    <button class="save-button" @click="save">save</button>
   </div>
 </template>
 
@@ -22,6 +23,11 @@ export default {
         // The configuration of the editor.
       },
     };
+  },
+  methods: {
+    save() {
+      console.log(this.editorData);
+    },
   },
 };
 </script>
